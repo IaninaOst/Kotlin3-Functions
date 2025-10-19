@@ -6,6 +6,6 @@ fun main() {
     check(10 == varArgSum(1, 2, 3, 4))
 }
 
-fun varArgSum(a1: Int, a2: Int, a3: Int): Int {
-    TODO("Implement `varArgSum`")
+fun varArgSum(a: Int, b: Int, vararg number: Int): Int {
+    return a + b + number.sum()
 }
