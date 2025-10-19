@@ -12,6 +12,6 @@ fun main() {
     check(true == list3.checkElementsType<Int>())
 }
 
-fun <T> Collection<Any>.checkElementsType(): Boolean {
-    TODO("Implement `checkElementsType`")
+inline fun <reified T> Collection<Any>.checkElementsType(): Boolean {
+    return all { it is T }
 }
